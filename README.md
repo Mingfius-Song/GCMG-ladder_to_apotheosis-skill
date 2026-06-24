@@ -97,6 +97,20 @@ flowchart TD
     Decision --> Future
 ```
 
+| Layer | What It Means | Typical Signals | Teaching Use |
+|---|---|---|---|
+| Nominal authority | The person who appears to decide and bears visible responsibility. | Title, signature, public statement, meeting chair. | Ask whether formal power also controls facts, options, and timing. |
+| Agenda control | Deciding what can enter discussion. | "Not today", "outside scope", "not the right forum". | Show how games are often decided before the meeting starts. |
+| Option design | Shaping the menu of choices. | One recommended option, one terrible decoy, missing alternatives. | Train the user to ask for omitted options and exclusion criteria. |
+| Information filtering | Controlling what facts arrive and in what order. | Summaries, briefings, selective data, delayed disclosure. | Separate fact, interpretation, preference, and recommendation. |
+| Risk framing | Making one path look reckless and another look prudent. | Action risks listed in detail; inaction treated as neutral. | Require symmetrical risk comparison. |
+| Procedure | Turning process into a soft veto. | Review, consultation, approval loops, legal sign-off, next cycle. | Ask what value the procedure protects and when it ends. |
+| Minutes and records | Controlling the official memory of the event. | "Discussed", "noted", "broad agreement", missing dissent. | Confirm decisions, dissent, owners, and dates in writing. |
+| Plausible deniability | Steering without appearing to refuse. | Advice, caution, delay, drafting, "helpful" alternatives. | Identify who shaped the outcome without owning it. |
+| Counter-strategy | Reclaiming decision quality. | Three real options, risk symmetry, owner clarity, written confirmation. | Teach upper-position and lower-position moves separately. |
+
+Sir Humphrey is therefore not merely a "bureaucratic style". In this system, he is the model for **present-tense control**: how a visible decision is quietly shaped through agenda, language, sequencing, records, and apparently responsible caution.
+
 ### Sir Arnold Institutional Structure
 
 ```mermaid
@@ -118,6 +132,19 @@ flowchart TD
     Containment --> Output
     Output --> Doctrine["Doctrine preserved<br/>the system remains harder to challenge next time"]
 ```
+
+| Layer | What It Means | Typical Signals | Teaching Use |
+|---|---|---|---|
+| Precedent risk | The fear that one concession becomes a reusable template. | "We cannot open this door", "what about everyone else?" | Ask what exact conditions would make the case generalizable. |
+| Reputation containment | Preventing exposure of respectable people or institutions. | Private settlement, dignified exit, honours, retirement, silence. | Separate personal dignity from operational responsibility. |
+| Continuity protection | Keeping the institution looking stable across scandals and ministers. | "For the good of the service", "constitutional propriety", "stability". | Test whether public necessity is masking class or network preservation. |
+| Institutional memory | Old files, old favours, old embarrassments, old relationships. | Someone knows the background before anyone explains it. | Teach the user to investigate what happened before the visible meeting. |
+| Senior consensus | Agreement among people who do not need to issue direct orders. | Informal calls, clubs, quiet alignment, career pressure. | Look for common knowledge among elites, not just formal instructions. |
+| Network protection | Mutual protection among people who expect future reciprocity. | Appointments, promotions, honours, consultancies, references. | Model it as an indefinite repeated game. |
+| Containment design | Solving the scandal without weakening the system. | Narrow exception, delay, private compromise, reclassification. | Identify whether the solution fixes the problem or protects the doctrine. |
+| Counter-strategy | Challenging the protected premise, not merely the individual. | Written criteria, narrow exceptions, independent records, review points. | Build a parallel long game: documentation, allies, public standards. |
+
+Sir Arnold is therefore the model for **deep institutional self-preservation**: not the everyday steering of a single decision, but the longer game by which precedent, memory, elite reciprocity, and respectable language keep the system difficult to injure.
 
 ## Repository Structure
 
@@ -320,6 +347,20 @@ flowchart TD
     DecisionCN --> FutureCN
 ```
 
+| 层级 | 含义 | 典型信号 | 教学用途 |
+|---|---|---|---|
+| 名义权力 | 看起来做决定并承担公开责任的人。 | 头衔、签字、公开表态、主持会议。 | 训练用户区分“能签字”与“能控制事实、选项、时机”。 |
+| 议程控制 | 决定什么能进入讨论。 | “今天不谈”“不在范围内”“不是合适场合”。 | 说明很多博弈在会议开始前已经被决定。 |
+| 选项设计 | 设计可见选择菜单。 | 一个推荐方案、一个糟糕陪衬、关键选项缺席。 | 训练用户追问被排除的选项和排除标准。 |
+| 信息过滤 | 控制哪些事实以何种顺序到达决策者。 | 摘要、简报、选择性数据、延迟披露。 | 区分事实、解释、偏好与建议。 |
+| 风险框定 | 让一条路显得鲁莽，另一条路显得审慎。 | 行动风险写满，不行动风险隐身。 | 要求行动与不行动风险对称比较。 |
+| 流程 | 把程序变成柔性否决。 | 复核、咨询、审批循环、法务签字、下个周期。 | 追问流程保护什么价值，以及何时结束。 |
+| 纪要与记录 | 控制事件的官方记忆。 | “已沟通”“已知悉”“原则认可”、异议消失。 | 训练用户书面确认结论、异议、责任人与日期。 |
+| 可否认性 | 推动结果但不显得自己拒绝。 | 建议、提醒、拖延、代拟文本、“帮助性”替代方案。 | 识别谁塑造了结果，却没有拥有结果。 |
+| 反制策略 | 夺回决策质量。 | 三个真实选项、风险对称、owner 清晰、书面确认。 | 分开讲上位者与下位者打法。 |
+
+因此，Sir Humphrey 在本系统中不只是“官僚风格”，而是**当前现场控制**的模型：一个可见决策如何被议程、语言、顺序、记录和看似负责的审慎悄悄塑形。
+
 ### Sir Arnold 的深层制度结构
 
 ```mermaid
@@ -341,6 +382,19 @@ flowchart TD
     ContainmentCN --> OutputCN
     OutputCN --> DoctrineCN["制度原则被保存<br/>下一次更难挑战"]
 ```
+
+| 层级 | 含义 | 典型信号 | 教学用途 |
+|---|---|---|---|
+| 先例风险 | 害怕一次让步变成可复制模板。 | “不能开这个口子”“以后大家都这样怎么办”。 | 追问到底哪些条件会让本案可泛化。 |
+| 声誉隔离 | 防止体面人物或体面机构被暴露。 | 私下解决、体面退场、授勋、退休、沉默。 | 区分个人体面与操作责任。 |
+| 连续性保护 | 让制度在丑闻和换届中保持稳定外观。 | “为了整体”“宪制责任”“稳定大局”。 | 检查公共必要性是否在掩护阶层或网络自保。 |
+| 制度记忆 | 旧档案、旧人情、旧尴尬、旧关系。 | 某些人还没解释就已经知道背景。 | 训练用户调查可见会议之前发生了什么。 |
+| 高级共识 | 不需要正式命令也能形成一致行动。 | 私人电话、俱乐部、安静对齐、职业压力。 | 观察精英间共同知识，而不只看正式指令。 |
+| 网络保护 | 预期未来互保的人彼此保护。 | 任命、晋升、授勋、顾问职位、推荐信。 | 用无限期重复博弈理解互保机制。 |
+| 控制性处理 | 解决丑闻，但不削弱制度。 | 窄化例外、拖延、私下妥协、重新定性。 | 判断方案是在解决问题，还是保存原则。 |
+| 反制策略 | 攻击被保护的前提，而不只是攻击个人。 | 书面标准、窄化例外、独立记录、复盘节点。 | 建立平行长线：文档、盟友、公共标准。 |
+
+因此，Sir Arnold 是**深层制度自保**的模型：不是单次决策的日常操盘，而是通过先例、记忆、精英互惠与体面语言，让制度长期保持难以被伤害。
 
 ## 仓库结构
 
