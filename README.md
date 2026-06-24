@@ -69,6 +69,56 @@ flowchart TD
     Turn3 --> Review["User review / sedimentation<br/>wait for next lesson"]
 ```
 
+## Internal Architecture
+
+### Sir Humphrey Operating Structure
+
+```mermaid
+flowchart TD
+    Situation["Concrete situation"] --> FormalPower["Nominal authority<br/>title, office, public responsibility"]
+    Situation --> ControlLayer["Practical control layer"]
+
+    ControlLayer --> Agenda["Agenda control<br/>what may be discussed"]
+    ControlLayer --> Options["Option design<br/>what choices appear available"]
+    ControlLayer --> Info["Information filtering<br/>what facts reach the decision-maker"]
+    ControlLayer --> Timing["Timing and sequencing<br/>when decisions become urgent or impossible"]
+    ControlLayer --> Procedure["Procedure and approvals<br/>reviews, committees, formats, sign-offs"]
+    ControlLayer --> Minutes["Minutes and records<br/>official memory of what happened"]
+    ControlLayer --> Risk["Risk framing<br/>which risks are made visible"]
+
+    FormalPower --> Decision["Visible decision"]
+    Agenda --> Decision
+    Options --> Decision
+    Info --> Decision
+    Timing --> Decision
+    Procedure --> Decision
+    Minutes --> Future["Future precedent and blame"]
+    Risk --> Decision
+    Decision --> Future
+```
+
+### Sir Arnold Institutional Structure
+
+```mermaid
+flowchart TD
+    Event["Visible event or request"] --> Precedent["Precedent risk<br/>can this be copied?"]
+    Event --> Reputation["Reputation risk<br/>who becomes exposed?"]
+    Event --> Continuity["Continuity risk<br/>does the institution look weakened?"]
+
+    Precedent --> SeniorConsensus["Senior consensus"]
+    Reputation --> SeniorConsensus
+    Continuity --> SeniorConsensus
+
+    SeniorConsensus --> Memory["Institutional memory<br/>old files, prior scandals, old relationships"]
+    SeniorConsensus --> Network["Elite network<br/>appointments, honours, retirement, mutual protection"]
+    SeniorConsensus --> Containment["Containment design<br/>delay, narrow exception, private settlement, dignified exit"]
+
+    Memory --> Output["Publicly respectable outcome"]
+    Network --> Output
+    Containment --> Output
+    Output --> Doctrine["Doctrine preserved<br/>the system remains harder to challenge next time"]
+```
+
 ## Repository Structure
 
 ```text
@@ -240,6 +290,56 @@ flowchart TD
     Turn2CN --> Pause2CN["消化节点<br/>等待继续"]
     Pause2CN --> Turn3CN["第 3/3 段<br/>策略、话术、误区、<br/>反制、术语"]
     Turn3CN --> ReviewCN["回顾沉淀<br/>等待下一课"]
+```
+
+## 内部结构图
+
+### Sir Humphrey 的现场操盘结构
+
+```mermaid
+flowchart TD
+    SituationCN["具体场景"] --> FormalPowerCN["名义权力<br/>头衔、职位、公开责任"]
+    SituationCN --> ControlLayerCN["实际控制层"]
+
+    ControlLayerCN --> AgendaCN["议程控制<br/>什么能被讨论"]
+    ControlLayerCN --> OptionsCN["选项设计<br/>哪些选择被呈现"]
+    ControlLayerCN --> InfoCN["信息过滤<br/>哪些事实到达决策者"]
+    ControlLayerCN --> TimingCN["时机与顺序<br/>何时变得紧急或不可能"]
+    ControlLayerCN --> ProcedureCN["流程与审批<br/>复核、委员会、格式、签字"]
+    ControlLayerCN --> MinutesCN["纪要与记录<br/>官方记忆如何形成"]
+    ControlLayerCN --> RiskCN["风险框定<br/>哪些风险被放大或隐藏"]
+
+    FormalPowerCN --> DecisionCN["可见决策"]
+    AgendaCN --> DecisionCN
+    OptionsCN --> DecisionCN
+    InfoCN --> DecisionCN
+    TimingCN --> DecisionCN
+    ProcedureCN --> DecisionCN
+    MinutesCN --> FutureCN["未来先例与责任"]
+    RiskCN --> DecisionCN
+    DecisionCN --> FutureCN
+```
+
+### Sir Arnold 的深层制度结构
+
+```mermaid
+flowchart TD
+    EventCN["可见事件或请求"] --> PrecedentCN["先例风险<br/>这件事能否被复制"]
+    EventCN --> ReputationCN["声誉风险<br/>谁会被暴露"]
+    EventCN --> ContinuityCN["连续性风险<br/>制度是否显得被削弱"]
+
+    PrecedentCN --> SeniorConsensusCN["高级共识"]
+    ReputationCN --> SeniorConsensusCN
+    ContinuityCN --> SeniorConsensusCN
+
+    SeniorConsensusCN --> MemoryCN["制度记忆<br/>旧档案、旧丑闻、旧关系"]
+    SeniorConsensusCN --> NetworkCN["精英网络<br/>任命、授勋、退休、互保"]
+    SeniorConsensusCN --> ContainmentCN["控制性处理<br/>拖延、窄化例外、私下解决、体面退场"]
+
+    MemoryCN --> OutputCN["公开上体面的结果"]
+    NetworkCN --> OutputCN
+    ContainmentCN --> OutputCN
+    OutputCN --> DoctrineCN["制度原则被保存<br/>下一次更难挑战"]
 ```
 
 ## 仓库结构
