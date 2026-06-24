@@ -69,6 +69,78 @@ flowchart TD
     Turn3 --> Review["User review / sedimentation<br/>wait for next lesson"]
 ```
 
+## Advanced System Architecture
+
+```mermaid
+flowchart LR
+    Request["User input"] --> Classifier{"Intent classifier"}
+
+    Classifier -->|Next lesson| LessonIntent["New topic route"]
+    Classifier -->|Continue| ContinueIntent["Continue current lesson"]
+    Classifier -->|Supplement| SupplementIntent["Current-topic supplement"]
+    Classifier -->|Scenario| ScenarioIntent["Scenario analysis"]
+    Classifier -->|Architecture| ArchitectureIntent["System explanation"]
+
+    LessonIntent --> Budget["Context budget and density control"]
+    ContinueIntent --> Budget
+    SupplementIntent --> Budget
+    ScenarioIntent --> Budget
+    ArchitectureIntent --> Budget
+
+    Budget --> CoreRouter["Core router<br/>humphrey-social-strategy"]
+
+    CoreRouter --> Primary["Always-on primary map<br/>nominal power vs practical control"]
+    CoreRouter --> PersonaMoE{"Persona MoE<br/>select only what is needed"}
+    CoreRouter --> KnowledgeMoE{"Knowledge MoE<br/>select only what explains the mechanism"}
+
+    PersonaMoE --> H["Sir Humphrey<br/>present decision control"]
+    PersonaMoE --> A["Sir Arnold<br/>institutional continuity and precedent"]
+    PersonaMoE --> E["Elon Musk<br/>execution and anti-bureaucracy"]
+    PersonaMoE --> M["Mao lens<br/>main contradiction and investigation"]
+    PersonaMoE --> P["Philosophy lens<br/>conceptual and moral clarity"]
+
+    KnowledgeMoE --> G["Game theory<br/>players, incentives, equilibrium"]
+    KnowledgeMoE --> Psy["Psychology<br/>bias, face, identity, threat"]
+    KnowledgeMoE --> OB["Organizational behavior<br/>procedure, minutes, responsibility"]
+    KnowledgeMoE --> MM["Mental models<br/>second-order, incentives, inversion"]
+    KnowledgeMoE --> S["SVO<br/>competitor, individualist, cooperator"]
+
+    Primary --> Composer["Lesson composer"]
+    H --> Composer
+    A --> Composer
+    E --> Composer
+    M --> Composer
+    P --> Composer
+    G --> Composer
+    Psy --> Composer
+    OB --> Composer
+    MM --> Composer
+    S --> Composer
+
+    Composer --> Style["Output style<br/>formal, precise, dry, practical"]
+    Composer --> Safety["Boundary layer<br/>no transcript dumps, no hidden full-corpus reproduction"]
+    Composer --> Pacing{"Pacing gate"}
+
+    Pacing -->|1/3| Segment1["Power map and positions"]
+    Pacing -->|2/3| Segment2["Domain mechanisms"]
+    Pacing -->|3/3| Segment3["Tactics, wording, counters, terminology"]
+
+    Segment1 --> PauseA["Explicit digestion pause"]
+    Segment2 --> PauseB["Explicit digestion pause"]
+    Segment3 --> ReviewGate["Review and sedimentation"]
+
+    PauseA --> UserSignal{"User says continue?"}
+    PauseB --> UserSignal
+    ReviewGate --> NextSignal{"User says next lesson?"}
+
+    UserSignal -->|yes| CoreRouter
+    UserSignal -->|supplement| SupplementIntent
+    NextSignal -->|yes| LessonIntent
+    NextSignal -->|review needed| SupplementIntent
+```
+
+This advanced map is the intended operating model: the mother skill does not load every expert at once. It classifies the user's request, preserves context budget, selects only the necessary persona and knowledge lenses, composes a dense lesson segment, then waits for explicit continuation or review.
+
 ## Internal Architecture
 
 ### Sir Humphrey Operating Structure
@@ -318,6 +390,78 @@ flowchart TD
     Pause2CN --> Turn3CN["第 3/3 段<br/>策略、话术、误区、<br/>反制、术语"]
     Turn3CN --> ReviewCN["回顾沉淀<br/>等待下一课"]
 ```
+
+## 高级系统架构图
+
+```mermaid
+flowchart LR
+    RequestCN["用户输入"] --> ClassifierCN{"意图分类器"}
+
+    ClassifierCN -->|下一课| LessonIntentCN["新主题路由"]
+    ClassifierCN -->|继续| ContinueIntentCN["继续当前课程"]
+    ClassifierCN -->|补充| SupplementIntentCN["当前主题补充"]
+    ClassifierCN -->|场景| ScenarioIntentCN["场景分析"]
+    ClassifierCN -->|架构| ArchitectureIntentCN["系统说明"]
+
+    LessonIntentCN --> BudgetCN["上下文预算与知识密度控制"]
+    ContinueIntentCN --> BudgetCN
+    SupplementIntentCN --> BudgetCN
+    ScenarioIntentCN --> BudgetCN
+    ArchitectureIntentCN --> BudgetCN
+
+    BudgetCN --> CoreRouterCN["核心路由<br/>humphrey-social-strategy"]
+
+    CoreRouterCN --> PrimaryCN["常驻主地图<br/>名义权力 vs 实际控制"]
+    CoreRouterCN --> PersonaMoECN{"人物 MoE<br/>只选择必要视角"}
+    CoreRouterCN --> KnowledgeMoECN{"知识 MoE<br/>只选择能解释机制的领域"}
+
+    PersonaMoECN --> HCN["Sir Humphrey<br/>当前决策控制"]
+    PersonaMoECN --> ACN["Sir Arnold<br/>制度连续性与先例"]
+    PersonaMoECN --> ECN["Elon Musk<br/>执行与反官僚"]
+    PersonaMoECN --> MCN["毛选视角<br/>主要矛盾与调查研究"]
+    PersonaMoECN --> PCN["哲学视角<br/>概念与道德澄清"]
+
+    KnowledgeMoECN --> GCN["博弈论<br/>玩家、激励、均衡"]
+    KnowledgeMoECN --> PsyCN2["心理学<br/>偏差、面子、身份、威胁"]
+    KnowledgeMoECN --> OBCN["组织行为<br/>流程、纪要、责任"]
+    KnowledgeMoECN --> MMCN["心智模型<br/>二阶效应、激励、逆向"]
+    KnowledgeMoECN --> SCN["SVO<br/>竞争型、个人主义型、合作型"]
+
+    PrimaryCN --> ComposerCN["课程合成器"]
+    HCN --> ComposerCN
+    ACN --> ComposerCN
+    ECN --> ComposerCN
+    MCN --> ComposerCN
+    PCN --> ComposerCN
+    GCN --> ComposerCN
+    PsyCN2 --> ComposerCN
+    OBCN --> ComposerCN
+    MMCN --> ComposerCN
+    SCN --> ComposerCN
+
+    ComposerCN --> StyleCN["输出风格<br/>正式、精确、冷幽默、可操作"]
+    ComposerCN --> SafetyCN["边界层<br/>不打包台词库，不复刻全文语料"]
+    ComposerCN --> PacingCN{"节奏闸门"}
+
+    PacingCN -->|1/3| Segment1CN2["权力地图与位置"]
+    PacingCN -->|2/3| Segment2CN2["领域机制"]
+    PacingCN -->|3/3| Segment3CN2["策略、话术、反制、术语"]
+
+    Segment1CN2 --> PauseACN["明确消化节点"]
+    Segment2CN2 --> PauseBCN["明确消化节点"]
+    Segment3CN2 --> ReviewGateCN["回顾与沉淀"]
+
+    PauseACN --> UserSignalCN{"用户是否继续？"}
+    PauseBCN --> UserSignalCN
+    ReviewGateCN --> NextSignalCN{"用户是否下一课？"}
+
+    UserSignalCN -->|继续| CoreRouterCN
+    UserSignalCN -->|补充| SupplementIntentCN
+    NextSignalCN -->|下一课| LessonIntentCN
+    NextSignalCN -->|继续沉淀| SupplementIntentCN
+```
+
+这张高级图对应实际运行方式：母 skill 不会一次性加载所有专家，而是先识别用户意图，再控制上下文预算，按需选择人物视角与领域知识，合成高密度课程段落，并在消化节点等待用户明确继续或复盘。
 
 ## 内部结构图
 
