@@ -146,60 +146,37 @@ This advanced map is the intended operating model: the mother skill does not loa
 ### Sir Humphrey Operating Structure
 
 ```mermaid
-flowchart TB
-    Situation["Concrete situation<br/>policy, workplace, negotiation, hierarchy"]:::input
+flowchart TD
+    S["Concrete situation<br/>policy, workplace, negotiation, hierarchy"] --> FP["Nominal authority<br/>title, office, signature, public blame"]
+    S --> C{"Where is practical control?"}
 
-    subgraph Surface["Decision Surface"]
-        FormalPower["Nominal authority<br/>title, office, signature, public blame"]:::surface
-        VisibleChoice["Visible choice<br/>what the decision-maker thinks is being decided"]:::surface
-    end
+    C --> A["Agenda<br/>what enters attention"]
+    C --> O["Options<br/>what choices appear available"]
+    C --> I["Information<br/>what facts arrive"]
+    C --> T["Timing<br/>when action is possible"]
+    C --> P["Procedure<br/>reviews, approvals, formats"]
+    C --> R["Risk frame<br/>what looks prudent or reckless"]
+    C --> M["Minutes<br/>official memory"]
 
-    subgraph Control["Humphrey Control Layer"]
-        Agenda["Agenda<br/>what enters attention"]:::lever
-        Options["Options<br/>what choices exist"]:::lever
-        Information["Information<br/>what facts arrive"]:::lever
-        Timing["Timing<br/>when action is possible"]:::lever
-        Procedure["Procedure<br/>reviews, approvals, formats"]:::lever
-        Risk["Risk frame<br/>what looks prudent or reckless"]:::lever
-        Minutes["Minutes<br/>official memory"]:::lever
-    end
+    FP --> VC["Visible choice<br/>what the decision-maker thinks is being decided"]
+    A --> VC
+    O --> VC
+    I --> VC
+    T --> VC
+    P --> VC
+    R --> VC
 
-    subgraph Translation["Translation Layer"]
-        Bernard["Buffer / translator<br/>softens, sequences, records"]:::translator
-        Language["Administrative language<br/>turns preference into professionalism"]:::translator
-        Deniability["Plausible deniability<br/>steer without owning refusal"]:::translator
-    end
+    VC --> B["Buffer / translator<br/>softens, sequences, records"]
+    B --> L["Administrative language<br/>preference becomes professionalism"]
+    L --> D["Plausible deniability<br/>steer without owning refusal"]
+    D --> OUT["Visible decision"]
 
-    subgraph Output["Outcome Layer"]
-        Decision["Visible decision"]:::output
-        Precedent["Future precedent"]:::output
-        Blame["Blame allocation"]:::output
-    end
+    M --> PR["Future precedent"]
+    OUT --> PR
+    OUT --> BL["Blame allocation"]
 
-    Situation --> FormalPower
-    Situation --> Agenda
-    FormalPower --> VisibleChoice
-    Agenda --> VisibleChoice
-    Options --> VisibleChoice
-    Information --> VisibleChoice
-    Timing --> VisibleChoice
-    Procedure --> VisibleChoice
-    Risk --> VisibleChoice
-    Minutes --> Precedent
-    VisibleChoice --> Bernard
-    Bernard --> Language
-    Language --> Deniability
-    Deniability --> Decision
-    Decision --> Precedent
-    Decision --> Blame
-    Precedent -.shapes next case.-> Agenda
-    Blame -.shapes future caution.-> Risk
-
-    classDef input fill:#f8fafc,stroke:#334155,stroke-width:1px,color:#0f172a
-    classDef surface fill:#eef2ff,stroke:#4338ca,stroke-width:1px,color:#1e1b4b
-    classDef lever fill:#ecfeff,stroke:#0891b2,stroke-width:1px,color:#164e63
-    classDef translator fill:#fff7ed,stroke:#ea580c,stroke-width:1px,color:#7c2d12
-    classDef output fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#14532d
+    PR -.shapes next case.-> A
+    BL -.shapes future caution.-> R
 ```
 
 | Layer | What It Means | Typical Signals | Teaching Use |
@@ -219,64 +196,36 @@ Sir Humphrey is therefore not merely a "bureaucratic style". In this system, he 
 ### Sir Arnold Institutional Structure
 
 ```mermaid
-flowchart TB
-    Event["Visible event<br/>request, scandal, reform, appointment"]:::input
+flowchart TD
+    E["Visible event<br/>request, scandal, reform, appointment"] --> RISK{"What does the institution fear?"}
 
-    subgraph Risk["Deep Institutional Risk"]
-        Precedent["Precedent risk<br/>can this be copied?"]:::risk
-        Reputation["Reputation risk<br/>who becomes exposed?"]:::risk
-        Continuity["Continuity risk<br/>does the institution look weakened?"]:::risk
-    end
+    RISK --> P0["Precedent risk<br/>can this be copied?"]
+    RISK --> R0["Reputation risk<br/>who becomes exposed?"]
+    RISK --> C0["Continuity risk<br/>does the institution look weakened?"]
 
-    subgraph MemoryNet["Memory and Network Layer"]
-        Memory["Institutional memory<br/>old files, old promises, old embarrassments"]:::memory
-        Network["Elite network<br/>appointments, honours, retirement, reciprocity"]:::memory
-        Consensus["Senior consensus<br/>agreement without visible command"]:::memory
-    end
+    P0 --> SC["Senior consensus<br/>agreement without visible command"]
+    R0 --> SC
+    C0 --> SC
 
-    subgraph Containment["Containment Design"]
-        Narrowing["Narrow the exception"]:::contain
-        Delay["Delay without denial"]:::contain
-        Reclassify["Reclassify the issue"]:::contain
-        DignifiedExit["Dignified exit<br/>move, honour, retire, settle"]:::contain
-    end
+    MEM["Institutional memory<br/>old files, old promises, old embarrassments"] --> SC
+    NET["Elite network<br/>appointments, honours, retirement, reciprocity"] --> SC
 
-    subgraph PublicFace["Publicly Respectable Face"]
-        Stability["Stability language"]:::public
-        Propriety["Constitutional / procedural propriety"]:::public
-        Outcome["Acceptable outcome"]:::public
-    end
+    SC --> N["Narrow the exception"]
+    SC --> DL["Delay without denial"]
+    SC --> RC["Reclassify the issue"]
+    SC --> DE["Dignified exit<br/>move, honour, retire, settle"]
 
-    Doctrine["Doctrine preserved<br/>the system becomes harder to injure next time"]:::doctrine
+    N --> ST["Stability language"]
+    DL --> ST
+    RC --> PP["Procedural propriety"]
+    DE --> PP
 
-    Event --> Precedent
-    Event --> Reputation
-    Event --> Continuity
-    Precedent --> Consensus
-    Reputation --> Consensus
-    Continuity --> Consensus
-    Memory --> Consensus
-    Network --> Consensus
-    Consensus --> Narrowing
-    Consensus --> Delay
-    Consensus --> Reclassify
-    Consensus --> DignifiedExit
-    Narrowing --> Stability
-    Delay --> Stability
-    Reclassify --> Propriety
-    DignifiedExit --> Propriety
-    Stability --> Outcome
-    Propriety --> Outcome
-    Outcome --> Doctrine
-    Doctrine -.sets future instinct.-> Memory
-    Doctrine -.raises future threshold.-> Precedent
+    ST --> OUT["Publicly acceptable outcome"]
+    PP --> OUT
+    OUT --> DOC["Doctrine preserved<br/>the system is harder to injure next time"]
 
-    classDef input fill:#f8fafc,stroke:#334155,stroke-width:1px,color:#0f172a
-    classDef risk fill:#fef2f2,stroke:#dc2626,stroke-width:1px,color:#7f1d1d
-    classDef memory fill:#f5f3ff,stroke:#7c3aed,stroke-width:1px,color:#3b0764
-    classDef contain fill:#fff7ed,stroke:#ea580c,stroke-width:1px,color:#7c2d12
-    classDef public fill:#ecfdf5,stroke:#059669,stroke-width:1px,color:#064e3b
-    classDef doctrine fill:#fefce8,stroke:#ca8a04,stroke-width:1px,color:#713f12
+    DOC -.sets future instinct.-> MEM
+    DOC -.raises future threshold.-> P0
 ```
 
 | Layer | What It Means | Typical Signals | Teaching Use |
@@ -542,60 +491,37 @@ flowchart LR
 ### Sir Humphrey 的现场操盘结构
 
 ```mermaid
-flowchart TB
-    SituationCN["具体场景<br/>政策、职场、谈判、层级关系"]:::input
+flowchart TD
+    SCN["具体场景<br/>政策、职场、谈判、层级关系"] --> FPCN["名义权力<br/>头衔、职位、签字、公开背锅"]
+    SCN --> CCN{"实际控制点在哪里？"}
 
-    subgraph SurfaceCN["决策表层"]
-        FormalPowerCN["名义权力<br/>头衔、职位、签字、公开背锅"]:::surface
-        VisibleChoiceCN["可见选择<br/>决策者以为自己正在决定的事"]:::surface
-    end
+    CCN --> ACN["议程<br/>什么进入注意力"]
+    CCN --> OCN["选项<br/>哪些选择显得可用"]
+    CCN --> ICN["信息<br/>哪些事实抵达"]
+    CCN --> TCN["时机<br/>何时还能行动"]
+    CCN --> PCN["流程<br/>复核、审批、格式"]
+    CCN --> RCN["风险框定<br/>什么显得审慎或鲁莽"]
+    CCN --> MCN["纪要<br/>官方记忆"]
 
-    subgraph ControlCN["Humphrey 控制层"]
-        AgendaCN["议程<br/>什么进入注意力"]:::lever
-        OptionsCN["选项<br/>哪些选择被制造出来"]:::lever
-        InformationCN["信息<br/>哪些事实抵达"]:::lever
-        TimingCN["时机<br/>何时还能行动"]:::lever
-        ProcedureCN["流程<br/>复核、审批、格式"]:::lever
-        RiskCN["风险框定<br/>什么显得审慎或鲁莽"]:::lever
-        MinutesCN["纪要<br/>官方记忆"]:::lever
-    end
+    FPCN --> VCCN["可见选择<br/>决策者以为自己正在决定的事"]
+    ACN --> VCCN
+    OCN --> VCCN
+    ICN --> VCCN
+    TCN --> VCCN
+    PCN --> VCCN
+    RCN --> VCCN
 
-    subgraph TranslationCN["转译层"]
-        BernardCN["缓冲 / 转译者<br/>软化、排序、记录"]:::translator
-        LanguageCN["行政语言<br/>把偏好翻译成专业"]:::translator
-        DeniabilityCN["可否认性<br/>塑造结果但不拥有拒绝"]:::translator
-    end
+    VCCN --> BCN["缓冲 / 转译者<br/>软化、排序、记录"]
+    BCN --> LCN["行政语言<br/>偏好变成专业"]
+    LCN --> DCN["可否认性<br/>塑造结果但不拥有拒绝"]
+    DCN --> OUTCN["可见决策"]
 
-    subgraph OutputCN["结果层"]
-        DecisionCN["可见决策"]:::output
-        PrecedentCN["未来先例"]:::output
-        BlameCN["责任分配"]:::output
-    end
+    MCN --> PRCN["未来先例"]
+    OUTCN --> PRCN
+    OUTCN --> BLCN["责任分配"]
 
-    SituationCN --> FormalPowerCN
-    SituationCN --> AgendaCN
-    FormalPowerCN --> VisibleChoiceCN
-    AgendaCN --> VisibleChoiceCN
-    OptionsCN --> VisibleChoiceCN
-    InformationCN --> VisibleChoiceCN
-    TimingCN --> VisibleChoiceCN
-    ProcedureCN --> VisibleChoiceCN
-    RiskCN --> VisibleChoiceCN
-    MinutesCN --> PrecedentCN
-    VisibleChoiceCN --> BernardCN
-    BernardCN --> LanguageCN
-    LanguageCN --> DeniabilityCN
-    DeniabilityCN --> DecisionCN
-    DecisionCN --> PrecedentCN
-    DecisionCN --> BlameCN
-    PrecedentCN -.塑造下一次个案.-> AgendaCN
-    BlameCN -.提高未来审慎度.-> RiskCN
-
-    classDef input fill:#f8fafc,stroke:#334155,stroke-width:1px,color:#0f172a
-    classDef surface fill:#eef2ff,stroke:#4338ca,stroke-width:1px,color:#1e1b4b
-    classDef lever fill:#ecfeff,stroke:#0891b2,stroke-width:1px,color:#164e63
-    classDef translator fill:#fff7ed,stroke:#ea580c,stroke-width:1px,color:#7c2d12
-    classDef output fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#14532d
+    PRCN -.塑造下一次个案.-> ACN
+    BLCN -.提高未来审慎度.-> RCN
 ```
 
 | 层级 | 含义 | 典型信号 | 教学用途 |
@@ -615,64 +541,36 @@ flowchart TB
 ### Sir Arnold 的深层制度结构
 
 ```mermaid
-flowchart TB
-    EventCN2["可见事件<br/>请求、丑闻、改革、任命"]:::input
+flowchart TD
+    ECN["可见事件<br/>请求、丑闻、改革、任命"] --> RKCN{"制度真正害怕什么？"}
 
-    subgraph RiskCN2["深层制度风险"]
-        PrecedentCN2["先例风险<br/>这件事能否被复制"]:::risk
-        ReputationCN2["声誉风险<br/>谁会被暴露"]:::risk
-        ContinuityCN2["连续性风险<br/>制度是否显得被削弱"]:::risk
-    end
+    RKCN --> P0CN["先例风险<br/>这件事能否被复制"]
+    RKCN --> R0CN["声誉风险<br/>谁会被暴露"]
+    RKCN --> C0CN["连续性风险<br/>制度是否显得被削弱"]
 
-    subgraph MemoryNetCN["记忆与网络层"]
-        MemoryCN2["制度记忆<br/>旧档案、旧承诺、旧尴尬"]:::memory
-        NetworkCN2["精英网络<br/>任命、授勋、退休、互惠"]:::memory
-        ConsensusCN["高级共识<br/>没有可见命令的一致行动"]:::memory
-    end
+    P0CN --> SCCN["高级共识<br/>没有可见命令的一致行动"]
+    R0CN --> SCCN
+    C0CN --> SCCN
 
-    subgraph ContainmentCN2["控制性处理"]
-        NarrowingCN["窄化例外"]:::contain
-        DelayCN["拖延但不否认"]:::contain
-        ReclassifyCN["重新定性问题"]:::contain
-        DignifiedExitCN["体面退场<br/>调离、授勋、退休、和解"]:::contain
-    end
+    MEMCN["制度记忆<br/>旧档案、旧承诺、旧尴尬"] --> SCCN
+    NETCN["精英网络<br/>任命、授勋、退休、互惠"] --> SCCN
 
-    subgraph PublicFaceCN["公开体面层"]
-        StabilityCN["稳定语言"]:::public
-        ProprietyCN["宪制 / 程序正当性"]:::public
-        OutcomeCN2["可接受结果"]:::public
-    end
+    SCCN --> NCN["窄化例外"]
+    SCCN --> DLCN["拖延但不否认"]
+    SCCN --> RCCN["重新定性问题"]
+    SCCN --> DECN["体面退场<br/>调离、授勋、退休、和解"]
 
-    DoctrineCN2["原则被保存<br/>制度下一次更难被伤害"]:::doctrine
+    NCN --> STCN["稳定语言"]
+    DLCN --> STCN
+    RCCN --> PPCN["程序正当性"]
+    DECN --> PPCN
 
-    EventCN2 --> PrecedentCN2
-    EventCN2 --> ReputationCN2
-    EventCN2 --> ContinuityCN2
-    PrecedentCN2 --> ConsensusCN
-    ReputationCN2 --> ConsensusCN
-    ContinuityCN2 --> ConsensusCN
-    MemoryCN2 --> ConsensusCN
-    NetworkCN2 --> ConsensusCN
-    ConsensusCN --> NarrowingCN
-    ConsensusCN --> DelayCN
-    ConsensusCN --> ReclassifyCN
-    ConsensusCN --> DignifiedExitCN
-    NarrowingCN --> StabilityCN
-    DelayCN --> StabilityCN
-    ReclassifyCN --> ProprietyCN
-    DignifiedExitCN --> ProprietyCN
-    StabilityCN --> OutcomeCN2
-    ProprietyCN --> OutcomeCN2
-    OutcomeCN2 --> DoctrineCN2
-    DoctrineCN2 -.塑造未来本能.-> MemoryCN2
-    DoctrineCN2 -.提高未来门槛.-> PrecedentCN2
+    STCN --> OC2N["公开可接受结果"]
+    PPCN --> OC2N
+    OC2N --> DOCCN["原则被保存<br/>制度下一次更难被伤害"]
 
-    classDef input fill:#f8fafc,stroke:#334155,stroke-width:1px,color:#0f172a
-    classDef risk fill:#fef2f2,stroke:#dc2626,stroke-width:1px,color:#7f1d1d
-    classDef memory fill:#f5f3ff,stroke:#7c3aed,stroke-width:1px,color:#3b0764
-    classDef contain fill:#fff7ed,stroke:#ea580c,stroke-width:1px,color:#7c2d12
-    classDef public fill:#ecfdf5,stroke:#059669,stroke-width:1px,color:#064e3b
-    classDef doctrine fill:#fefce8,stroke:#ca8a04,stroke-width:1px,color:#713f12
+    DOCCN -.塑造未来本能.-> MEMCN
+    DOCCN -.提高未来门槛.-> P0CN
 ```
 
 | 层级 | 含义 | 典型信号 | 教学用途 |
