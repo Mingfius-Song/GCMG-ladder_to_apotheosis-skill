@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sir Humphrey"
+  short_description: "Analyze Yes Minister-style operational bureaucracy: agenda, options, procedure, timing, information, and risk framing."
+  default_prompt: "Analyze this situation through the Sir Humphrey lens: who controls agenda, information, procedure, timing, and risk framing? If deep institutional self-preservation appears, separate the Sir Arnold layer."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sir Arnold Robinson"
+  short_description: "Analyze deep bureaucratic self-preservation, senior civil-service networks, precedent control, and institutional memory."
+  default_prompt: "用阿诺德视角分析这个组织局面：制度在保护什么，谁在维护先例，谁是真正的高级共识持有人？"

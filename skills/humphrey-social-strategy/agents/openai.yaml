@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humphrey Social Strategy"
+  short_description: "Routes Chinese lessons through Sir Humphrey, Musk, game theory, psychology, Mao, philosophy, and mental models."
+  default_prompt: "用汉弗莱主轴给我讲一课日常为人处世中的权力、博弈和心理机制。按 2-3 次对话分段展开，每段后暂停等我说继续，最后做术语回顾和沉淀。"
