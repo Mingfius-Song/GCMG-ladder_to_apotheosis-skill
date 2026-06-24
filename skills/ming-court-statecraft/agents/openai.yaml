@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ming Court Statecraft"
+  short_description: "Ming court politics as a Humphrey enhancer."
+  default_prompt: "Use $ming-court-statecraft to analyze a hierarchy game through Ming court politics while keeping Sir Humphrey as the primary lens."

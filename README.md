@@ -21,6 +21,7 @@ Core principles:
 - **Sir Humphrey remains the primary axis**: every lesson starts from nominal authority vs practical control, procedure, agenda, information, timing, responsibility, and sanctions.
 - **Persona lenses and knowledge lenses are separated**: characters provide perspective; disciplines explain mechanisms.
 - **Arnold is used selectively**: he deepens analysis when the issue involves senior institutional memory, precedent protection, reputation containment, and continuity.
+- **Ming court statecraft is a decoupled enhancer**: it strengthens Humphrey with emperor-minister games, inner/outer court, censorial morality, fiscal constraint, and reform backlash, but never replaces the Humphrey axis.
 - **Mao-selected-works methodology is auxiliary**: it checks main contradiction, investigation, alliances, and long-game structure, but does not replace the Humphrey axis.
 - **Musk is a high-frequency execution lens**: use him for first principles, anti-bureaucracy, owner clarity, speed, and process deletion.
 - **Mental models are routed, not dumped**: use only the models that reveal a named blind spot.
@@ -39,6 +40,7 @@ flowchart TD
 
     Router --> PersonaGate{"Persona lens needed?"}
     PersonaGate -->|Institutional continuity / precedent / senior network| Arnold["sir-arnold-robinson"]
+    PersonaGate -->|Imperial-bureaucratic analogy / Ming court politics| Ming["ming-court-statecraft"]
     PersonaGate -->|Execution / anti-bureaucracy / first principles| Musk["mimeograph-elon-musk<br/>(optional peer)"]
     PersonaGate -->|Main contradiction / investigation / alliance| Mao["mao-zedong-perspective<br/>(optional peer)"]
     PersonaGate -->|Moral or conceptual conflict| Philosophy["Philosophy peers<br/>Aristotle, Confucius, Hume,<br/>Nietzsche, Aurelius, Anscombe"]
@@ -52,6 +54,7 @@ flowchart TD
 
     PowerMap --> LessonPlan["Lesson plan"]
     Arnold --> LessonPlan
+    Ming --> LessonPlan
     Musk --> LessonPlan
     Mao --> LessonPlan
     Philosophy --> LessonPlan
@@ -95,6 +98,7 @@ flowchart LR
 
     PersonaMoE --> H["Sir Humphrey<br/>present decision control"]
     PersonaMoE --> A["Sir Arnold<br/>institutional continuity and precedent"]
+    PersonaMoE --> MingA["Ming court statecraft<br/>imperial-bureaucratic enhancer"]
     PersonaMoE --> E["Elon Musk<br/>execution and anti-bureaucracy"]
     PersonaMoE --> M["Mao lens<br/>main contradiction and investigation"]
     PersonaMoE --> P["Philosophy lens<br/>conceptual and moral clarity"]
@@ -108,6 +112,7 @@ flowchart LR
     Primary --> Composer["Lesson composer"]
     H --> Composer
     A --> Composer
+    MingA --> Composer
     E --> Composer
     M --> Composer
     P --> Composer
@@ -260,9 +265,15 @@ GCMG-ladder_to_apotheosis-skill/
     │   └── references/
     │       ├── model.md
     │       └── sources.md
-    └── sir-arnold-robinson/
+    ├── sir-arnold-robinson/
+    │   ├── SKILL.md
+    │   └── agents/openai.yaml
+    └── ming-court-statecraft/
         ├── SKILL.md
-        └── agents/openai.yaml
+        ├── agents/openai.yaml
+        └── references/
+            ├── model.md
+            └── sources.md
 ```
 
 ## Included Skills
@@ -272,6 +283,7 @@ GCMG-ladder_to_apotheosis-skill/
 | `humphrey-social-strategy` | Mother router for Chinese fragmented lessons and scenario analysis. It coordinates persona lenses, domain knowledge, lesson pacing, terminology, and output style. |
 | `sir-humphrey` | Power hidden in procedure: agenda control, option design, information filtering, timing, minutes, risk framing, and nominal-vs-practical authority. |
 | `sir-arnold-robinson` | Senior institutional self-preservation, precedent control, continuity, reputation containment, succession, and elite administrative memory. |
+| `ming-court-statecraft` | Decoupled Ming imperial-bureaucratic enhancer: throne authority, inner/outer court, grand secretariat, censors, moralized legitimacy, fiscal constraint, and reform aftershock. |
 
 ## Optional Peer Skills
 
@@ -366,6 +378,7 @@ MIT for the original skill instructions in this repository. The MIT license does
 - **Sir Humphrey 是主轴**：每一课优先从名义权力与实际控制、流程、议程、信息、时机、责任与制裁来分析。
 - **人物视角与领域知识分层**：人物提供观察位置，学科解释运行机制。
 - **Arnold 选择性触发**：当问题涉及高级制度记忆、先例保护、声誉隔离与连续性时启用。
+- **明代宫廷权术是解耦增强包**：用于把皇权-官僚结构、内外廷、言官清议、财政约束与改革反噬补进 Humphrey 分析，但不取代 Humphrey 主轴。
 - **毛选方法论是重要旁证**：用于校验主要矛盾、调查研究、联盟与长期斗争结构，但不取代 Humphrey 主轴。
 - **马斯克视角高频但从属**：用于第一性原理、反官僚、责任 owner、速度、删除无效流程。
 - **mental models 只按需触发**：只使用能揭示盲点的模型，避免上下文臃肿。
@@ -384,6 +397,7 @@ flowchart TD
 
     RouterCN --> PersonaGateCN{"是否需要人物视角？"}
     PersonaGateCN -->|制度连续性 / 先例 / 高级网络| ArnoldCN["sir-arnold-robinson"]
+    PersonaGateCN -->|皇权-官僚类比 / 明代宫廷政治| MingCN["ming-court-statecraft"]
     PersonaGateCN -->|执行 / 反官僚 / 第一性原理| MuskCN["mimeograph-elon-musk<br/>可选 peer"]
     PersonaGateCN -->|主要矛盾 / 调查研究 / 联盟| MaoCN["mao-zedong-perspective<br/>可选 peer"]
     PersonaGateCN -->|道德或概念冲突| PhilosophyCN["哲学 peer<br/>亚里士多德、孔子、休谟、<br/>尼采、奥勒留、安斯康姆"]
@@ -397,6 +411,7 @@ flowchart TD
 
     PowerMapCN --> LessonPlanCN["课程规划"]
     ArnoldCN --> LessonPlanCN
+    MingCN --> LessonPlanCN
     MuskCN --> LessonPlanCN
     MaoCN --> LessonPlanCN
     PhilosophyCN --> LessonPlanCN
@@ -440,6 +455,7 @@ flowchart LR
 
     PersonaMoECN --> HCN["Sir Humphrey<br/>当前决策控制"]
     PersonaMoECN --> ACN["Sir Arnold<br/>制度连续性与先例"]
+    PersonaMoECN --> MingACN["明代宫廷权术<br/>皇权-官僚增强包"]
     PersonaMoECN --> ECN["Elon Musk<br/>执行与反官僚"]
     PersonaMoECN --> MCN["毛选视角<br/>主要矛盾与调查研究"]
     PersonaMoECN --> PCN["哲学视角<br/>概念与道德澄清"]
@@ -453,6 +469,7 @@ flowchart LR
     PrimaryCN --> ComposerCN["课程合成器"]
     HCN --> ComposerCN
     ACN --> ComposerCN
+    MingACN --> ComposerCN
     ECN --> ComposerCN
     MCN --> ComposerCN
     PCN --> ComposerCN
@@ -605,9 +622,15 @@ GCMG-ladder_to_apotheosis-skill/
     │   └── references/
     │       ├── model.md
     │       └── sources.md
-    └── sir-arnold-robinson/
+    ├── sir-arnold-robinson/
+    │   ├── SKILL.md
+    │   └── agents/openai.yaml
+    └── ming-court-statecraft/
         ├── SKILL.md
-        └── agents/openai.yaml
+        ├── agents/openai.yaml
+        └── references/
+            ├── model.md
+            └── sources.md
 ```
 
 ## 包含的 Skills
@@ -617,6 +640,7 @@ GCMG-ladder_to_apotheosis-skill/
 | `humphrey-social-strategy` | 中文碎片化课程与场景分析的母路由，协调人物视角、领域知识、课程节奏、术语与输出风格。 |
 | `sir-humphrey` | 分析隐藏在流程里的权力：议程控制、选项设计、信息过滤、时机、纪要、风险框定、名义权力与实际控制。 |
 | `sir-arnold-robinson` | 分析高级制度自保、先例控制、连续性、声誉隔离、继任与行政记忆。 |
+| `ming-court-statecraft` | 解耦的明代皇权-官僚政治增强包：皇权、内外廷、内阁、司礼监、言官清议、财政约束与改革反噬。 |
 
 ## 可选 Peer Skills
 

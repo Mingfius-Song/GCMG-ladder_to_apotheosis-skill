@@ -1,6 +1,6 @@
 ---
 name: humphrey-social-strategy
-description: Use when the user wants Chinese fragmented lessons or analysis about daily social strategy, hierarchy games, bureaucracy, negotiation, power, compliance, deterrence, game theory, psychology, Sir Humphrey, Yes Minister, Mao-selected-works methodology, mental models, philosophy, or Elon Musk-style execution and anti-bureaucracy.
+description: Use when the user wants Chinese fragmented lessons or analysis about daily social strategy, hierarchy games, bureaucracy, negotiation, power, compliance, deterrence, game theory, psychology, Sir Humphrey, Yes Minister, Ming imperial statecraft, Mao-selected-works methodology, mental models, philosophy, or Elon Musk-style execution and anti-bureaucracy.
 ---
 
 # Humphrey Social Strategy
@@ -18,7 +18,7 @@ Separate persona lenses from knowledge lenses.
 | Layer | Status | Purpose |
 |---|---|---|
 | Sir Humphrey axis | Always primary | Identify formal power vs actual control. |
-| Persona lenses | Conditional | Add viewpoints such as Arnold, Musk, Mao, Nietzsche, Aurelius, Aristotle, Confucius, Hume, Anscombe. |
+| Persona lenses | Conditional | Add viewpoints such as Arnold, Ming court statecraft, Musk, Mao, Nietzsche, Aurelius, Aristotle, Confucius, Hume, Anscombe. |
 | Knowledge lenses | Per lesson | Explain mechanisms with game theory, psychology, organizational behavior, philosophy, SVO, and mental models. |
 | Mao auxiliary lens | Important but secondary | Check main contradiction, investigation, united front, long-game strategy, and feedback loops. |
 | Output layer | Always | Produce tactics, wording, mistakes, counters, and terminology. |
@@ -31,6 +31,7 @@ Use this internal architecture when generating lessons. Do not print the archite
 |---|---|---|
 | Primary axis | Sir Humphrey is the active organizing axis for power, procedure, agenda, options, timing, records, and responsibility. | Lessons begin from practical control, not abstract moral commentary. |
 | Shadow doctrine | Sir Arnold is the elder institutional pattern behind Humphrey: precedent, senior consensus, network memory, continuity, and class solidarity. | Arnold appears when a tactical issue touches deep institutional self-preservation. |
+| Ming statecraft enhancer | Ming court statecraft is a decoupled auxiliary package: throne authority, inner/outer court, grand secretariat, censors, legitimacy, fiscal constraint, and reform aftershock. | Use it to strengthen Humphrey when the structure resembles imperial-bureaucratic politics; never let it replace Humphrey. |
 | Persona router | Add at most one extra persona lens in a normal lesson, except when Arnold is needed to explain Humphrey's inherited doctrine. | The output stays MoE-like: selected experts, not a crowded panel. |
 | Knowledge router | Use game theory, psychology, organization theory, SVO, mental models, philosophy, Mao auxiliary checks, and Musk execution checks as mechanism explainers. | Every lesson has domain knowledge, but only the relevant mechanisms are expanded. |
 | Pacing router | Split dense lessons into 2-3 full-density turns with explicit pause nodes. | The user receives more total detail without turning one answer into an unreadable wall. |
@@ -94,6 +95,8 @@ Use `sir-humphrey` logic whenever the topic involves hierarchy, bureaucracy, wor
 
 Use `sir-arnold-robinson` logic when the topic involves deep institutional self-preservation, senior official networks, precedent protection, Cabinet Secretary behavior, succession, reputational containment, or the teacher-shadow pattern behind Humphrey-style tactics. Treat Arnold and Humphrey as the same bureaucratic species and status-world: Arnold is Humphrey's teacher-pattern, not merely a superior layer.
 
+Use `ming-court-statecraft` logic when the topic involves emperor-minister games, inner court vs outer court, powerful agents, censors, legitimacy wars, moralized politics, reform backlash, fiscal constraint, Ming Dynasty analogies, Wanli, Zhang Juzheng, Hai Rui, Qi Jiguang, Wei Zhongxian, or imperial statecraft. Treat it as an enhancer that supplies eastern historical structure; do not make it the main axis unless the user explicitly asks for Ming court politics.
+
 ### High-frequency persona lens
 
 Use Elon Musk-style reasoning often, but conditionally:
@@ -115,6 +118,7 @@ Do not make Musk the main persona unless the lesson is about execution, anti-bur
 |---|---|
 | Bureaucratic control, procedural capture, elegant obstruction | Sir Humphrey |
 | Deep institutional self-preservation, senior networks, precedent control, Humphrey's teacher-shadow | Sir Arnold Robinson |
+| Imperial statecraft, inner/outer court, moralized legitimacy, reform backlash, Ming court politics | Ming Court Statecraft |
 | Execution, first principles, anti-bureaucracy, urgency | Elon Musk |
 | Main contradiction, investigation, alliances, long struggle | Mao auxiliary lens |
 | Value conflict, power morality, resentment, self-overcoming | Nietzsche |
@@ -124,7 +128,7 @@ Do not make Musk the main persona unless the lesson is about execution, anti-bur
 | Evidence, causality, institutional legitimacy, sentiment vs reason | Hume |
 | Intention, moral description, means vs ends | Anscombe |
 
-Use at most two persona lenses in one normal lesson: Sir Humphrey plus one conditional lens. Sir Arnold may be paired with Humphrey when the lesson requires showing the shadow/teacher relationship: Arnold as formative doctrine, Humphrey as active operator. Add Mao as auxiliary only when it sharpens strategy.
+Use at most two persona lenses in one normal lesson: Sir Humphrey plus one conditional lens. Sir Arnold may be paired with Humphrey when the lesson requires showing the shadow/teacher relationship: Arnold as formative doctrine, Humphrey as active operator. Ming court statecraft may be paired with Humphrey when imperial-bureaucratic structure clarifies the mechanism. Add Mao as auxiliary only when it sharpens strategy.
 
 ### Knowledge Router
 
@@ -147,9 +151,10 @@ Use knowledge lenses to explain the mechanism, not to display encyclopedic cover
 3. Knowledge lenses answer "why does this mechanism work?"
 4. Mao is an important corroborating method, not a co-primary voice.
 5. Arnold is Humphrey's teacher-shadow within the same bureaucratic class-world, not a simple superior layer and not a replacement for Humphrey.
-6. Musk is high-frequency for execution and anti-bureaucracy, but subordinate to the Humphrey power map.
-7. If a lesson becomes too broad, preserve the power map and terminology; compress secondary lenses.
-8. Never use the rejected fixed four-stage mode.
+6. Ming court statecraft is an enhancement package for imperial-bureaucratic analogies, not a replacement for Humphrey and not a general-purpose Chinese-power lens.
+7. Musk is high-frequency for execution and anti-bureaucracy, but subordinate to the Humphrey power map.
+8. If a lesson becomes too broad, preserve the power map and terminology; compress secondary lenses.
+9. Never use the rejected fixed four-stage mode.
 
 ## Output Style
 
